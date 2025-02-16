@@ -1,0 +1,145 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* Ensures consistent box model across all elements */
+}
+
+.main-wrapper {
+    padding-left: 8rem;
+    padding-right: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.main-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #cacaca;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px; /* Ensures the container is consistent */
+    height: 100vh;
+    overflow: hidden; /* Prevents overflowing content */
+}
+
+.main-div h1 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.form-container,
+.add-todo-container {
+    width: 100%; /* Ensures the containers take the full width of the parent */
+    max-width: 400px; /* Same max width for consistency */
+    margin: 0;
+}
+
+.form-label {
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-input{
+    height: 2.5rem;
+    width: 100%; /* Ensures input takes full width of the container */
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    display: block;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.todo-wrapper{
+    width: 100%;
+    max-width: 400px; /* Same max-width to align with the search and add todo bar */
+    height: 250px;
+    overflow-y: auto;
+}
+
+.todos-container {
+    width: 100%;
+    max-width: 400px; /* Same max-width to align with the search and add todo bar */
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+     /* Set a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.todo_item {
+    display: flex; /* Makes the todo items inline for horizontal scroll */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin-bottom: 0.5rem; /* Adds space between todo items */
+    width: 100%; /* Ensures todo items take full width available */
+}
+
+.task-text {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.trash-icon-container {
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.trash-icon {
+    width: 24px;
+    height: 24px;
+    color: #ccc;
+}
+
+.trash-icon:hover {
+    color: #e74c3c;
+}
+
+/* Add new todo container - using position: sticky to keep it at the bottom of the screen */
+.add-todo-container {
+    width: 100%;
+    max-width: 400px;
+    margin: 0;;
+    position: fixed; /* Stick it to the bottom of the .main-div */
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem; /* Optional padding to add some space */
+}
+
+.add-todo-container .form-input {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.add-todo-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide{
+    display: none;
+}
+
+.delete-todo {  
+    border: none;
+}
